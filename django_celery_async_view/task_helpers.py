@@ -38,7 +38,7 @@ def open_result(result):
     else:
         temp_file = TempFile.objects.get(id=result)
         opened_result = {
-            'content': temp_file.bytes,
+            'content': bytes.fromhex(temp_file.bytes),
             'user_id': temp_file.user_id,
             'filename': temp_file.filename,
             'mimetype': temp_file.mimetype,

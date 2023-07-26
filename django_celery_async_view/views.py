@@ -170,7 +170,7 @@ class AsyncDownloadView(_BaseView):
             HttpResponse if something failed
             else None
         """
-        raise NotImplementedError('Implement this when extending.')
+        super().setup(request)
 
     def get(self, request):
         if self.eager:

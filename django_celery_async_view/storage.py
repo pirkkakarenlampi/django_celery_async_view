@@ -47,7 +47,7 @@ class TempFileDatabaseFileStorage(FixedModelDatabaseFileStorage):
             mimetype = getattr(content.file, 'content_type', 'text/plain')
 
         create_kwargs.update({
-            content_field: encoded_bytes,
+            content_field: encoded_bytes.hex(),
             filename_field: new_filename,
             mimetype_field: mimetype,
         })

@@ -65,7 +65,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'django-db-file-storage==0.4.3'
+        'django-db-file-storage==0.5.5'
     ],
     license="MIT",
     zip_safe=False,
